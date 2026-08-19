@@ -1,0 +1,23 @@
+<group name="mini-soc,falco,">
+
+  <rule id="100200" level="8">
+    <decoded_as>json</decoded_as>
+    <field name="rule">Terminal shell in container</field>
+    <description>Falco: shell interactivo - usuario $(output_fields.user.name), proceso $(output_fields.proc.name)</description>
+    <mitre>
+      <id>T1059</id>
+    </mitre>
+    <group>falco,mitre_execution,</group>
+  </rule>
+
+  <rule id="100201" level="10">
+    <decoded_as>json</decoded_as>
+    <field name="rule">Read sensitive file untrusted</field>
+    <description>Falco: lectura de archivo sensible $(output_fields.fd.name) por usuario $(output_fields.user.name)</description>
+    <mitre>
+      <id>T1552.001</id>
+    </mitre>
+    <group>falco,mitre_credential_access,</group>
+  </rule>
+
+</group>
