@@ -1,0 +1,12 @@
+<!-- Bloques agregados manualmente a /var/ossec/etc/ossec.conf del agente target-host -->
+
+<!-- Monitoreo de auth.log - no viene por defecto en un contenedor sin systemd -->
+<localfile>
+  <log_format>syslog</log_format>
+  <location>/var/log/auth.log</location>
+</localfile>
+
+<!-- Intervalo de Syscollector reducido para efectos de demo -->
+<wodle name="syscollector">
+  <interval>10m</interval>
+</wodle>

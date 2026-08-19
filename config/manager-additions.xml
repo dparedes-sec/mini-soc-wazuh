@@ -1,0 +1,12 @@
+<!-- Bloques agregados manualmente a /var/ossec/etc/ossec.conf del manager -->
+
+<!-- Ingesta de alertas de Falco -->
+<localfile>
+  <log_format>json</log_format>
+  <location>/var/ossec/logs/falco/falco-alerts.json</location>
+</localfile>
+
+<!-- Vulnerability Detection (viene activo por defecto desde Wazuh 4.8, confirmado explícito) -->
+<vulnerability-detection>
+  <enabled>yes</enabled>
+</vulnerability-detection>
