@@ -1,0 +1,19 @@
+rules_file:
+  - /etc/falco/falco_rules.yaml
+
+plugins:
+  - name: container
+    library_path: libcontainer.so
+    init_config: ""
+
+load_plugins: [container]
+
+engine:
+  kind: modern_ebpf
+
+file_output:
+  enabled: true
+  keep_alive: false
+  filename: /var/log/falco/falco-alerts.json
+
+json_output: true
