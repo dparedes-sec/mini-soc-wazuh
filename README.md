@@ -33,22 +33,25 @@ entidades.**
 ## Estructura
 ```text
 mini-soc-wazuh/
-├── target-host/
-│   └── Dockerfile
-├── falco/
-│   └── falco.yaml
+├── config/
+│   ├── agent-additions.xml
+│   └── manager-additions.xml
+├── dashboards/
+│   └── mini-soc-dashboard.ndjson
 ├── detection/
 │   └── wazuh/
 │       └── local_rules.xml
-├── dashboards/
-│   └── mini-soc-dashboard.ndjson
+├── evidence/
+│   ├── CVE-2022-41409.md
+│   └── vulnerability-detection-inventory.png
+├── falco/
+│   └── falco.yaml
 ├── runbooks/
 │   ├── RUNBOOK-01-ssh-bruteforce.md
 │   ├── RUNBOOK-02-falco-container.md
 │   └── RUNBOOK-03-vulnerability.md
-├── evidence/
-│   ├── CVE-2022-41409.md
-│   └── vulnerability-detection-inventory.png
+├── target-host/
+│   └── Dockerfile
 └── README.md
 ```
 
