@@ -1,3 +1,33 @@
-*.pem
+# Local environment
+.env
+.env.*
+!.env.example
+
+# Runtime secrets
+secrets/
+*.secret
 *.key
-certs/
+*.pem
+*.p12
+*.pfx
+
+# Raw or private evidence
+evidence/raw/
+evidence/private/
+
+# Runtime data
+logs/
+data/
+backups/
+tmp/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.log
